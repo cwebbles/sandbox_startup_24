@@ -2,7 +2,7 @@ const { json } = require('express');
 const fs = require('fs');
 const path = require('path');
 
-exports.getRouteData = function (route_id) {
+exports.getRouteData = function (route_name) {
 
     let route_data;
 
@@ -22,7 +22,7 @@ exports.getRouteData = function (route_id) {
             console.error('Error parsing JSON string:', err);
         }
 
-        return json_data.filter(route => route.route_id === route_id);
+        return json_data.byu_routes.filter(route => route.route_name === route_name);
     });
 
 };
