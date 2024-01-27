@@ -1,9 +1,9 @@
-body {
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
-
 h1 {
     text-align: center;
     margin: 0;
@@ -13,16 +13,52 @@ h1 {
 }
 
 #map {
-    height: 300px; /* Smaller height for mobile */
+    height: 100%;
+    width: 100%;
 }
 
 #directionsPanel {
     padding: 10px;
 }
 
-/* Larger screens */
-@media (min-width: 600px) {
-    #map {
-        height: 400px; /* Larger height for larger screens */
-    }
+.offcanvas.show {
+    height: 456px;
+    border-radius: 24px;
+}
+
+.offcanvas-body .row .col {
+    font-size: larger;
+    padding: 10px;
+}
+
+.offcanvas-body .row {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Grey line */
+    padding-bottom: 10px; /* Spacing below each row */
+    
+}
+
+.offcanvas-body .row:last-child {
+    border-bottom: none; /* Remove the border from the last row */
+    
+}
+
+.offcanvas-body .row .col span:first-child {
+    font-size: 16px;
+}
+
+/* Styling for '1.4 miles' and SVG icon */
+.offcanvas-body .row .col div:last-child {
+    font-size: 12px;
+    color: #6A6A6A;
+}
+
+/* Styling for SVG icon */
+.offcanvas-body .row .col svg {
+    fill: #6A6A6A;
+}
+
+/* Styling for '9 min' */
+.offcanvas-body .row .col strong {
+    font-size: 20px;
 }

@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Parking Solution</title>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs9bfpAKuLclsBsZUIOGKdw8XJRWzaJgA&callback=initMap"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs9bfpAKuLclsBsZUIOGKdw8XJRWzaJgA&callback=initMap"></script>
+
+    <!-- Directions JS -->
     <script src="directions.js"></script>
     <script>
         var directionsService,
@@ -27,11 +36,83 @@
 </head>
 <body>
     <h1>Our Parking Solution</h1>
+    <!-- Offcanvas Toggle Button -->
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
     
+    <!-- Offcanvas Component -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h6 class="offcanvas-title" id="offcanvasBottomLabel">Recommended:</h6>
+        </div>
+        <div class="offcanvas-body small">
+            <!-- Rows -->
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="d-flex justify-content-between">
+                        <span>Ryde Shuttle</span>
+                        <span><strong>9 min</strong></span>
+                    </div>
+                    <div>
+                        1.4 miles
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16">
+                            <path d="M240-120q-17 0-28.5-11.5T200-160v-82q-18-20-29-44.5T160-340v-380q0-83 77-121.5T480-880q172 0 246 37t74 123v380q0 29-11 53.5T760-242v82q0 17-11.5 28.5T720-120h-40q-17 0-28.5-11.5T640-160v-40H320v40q0 17-11.5 28.5T280-120h-40Zm242-640h224-448 224Zm158 280H240h480-80Zm-400-80h480v-120H240v120Zm100 240q25 0 42.5-17.5T400-380q0-25-17.5-42.5T340-440q-25 0-42.5 17.5T280-380q0 25 17.5 42.5T340-320Zm280 0q25 0 42.5-17.5T680-380q0-25-17.5-42.5T620-440q-25 0-42.5 17.5T560-380q0 25 17.5 42.5T620-320ZM258-760h448q-15-17-64.5-28.5T482-800q-107 0-156.5 12.5T258-760Zm62 480h320q33 0 56.5-23.5T720-360v-120H240v120q0 33 23.5 56.5T320-280Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="d-flex justify-content-between">
+                        <span>Spin Scooter</span>
+                        <span><strong>14 min</strong></span>
+                    </div>
+                    <div>1.7 miles</div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="d-flex justify-content-between">
+                        <span>UTA</span>
+                        <span><strong>17 min</strong></span>
+                    </div>
+                    <div>2.3 miles</div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="d-flex justify-content-between">
+                        <span>Bike</span>
+                        <span><strong>19 min</strong></span>
+                    </div>
+                    <div>1.8 miles</div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="d-flex justify-content-between">
+                        <span>Walk</span>
+                        <span><strong>23 min</strong></span>
+                    </div>
+                    <div>1.6 miles</div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="d-flex justify-content-between">
+                        <span>Car</span>
+                        <span><strong>24 min</strong></span>
+                    </div>
+                    <div>2.4 miles</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
     <div id="map"></div>
     <div id="directionsPanel"></div>
 
-    <button id="test">Get Ryde</button>
-    <button id="test2">Get Bike</button>
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
