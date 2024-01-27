@@ -1,0 +1,26 @@
+{
+    "byu_routes": [
+        {
+            "route_id": "1",
+            "route_name": "Wyview Ryde Shuttle",
+            "route_coordinates": {
+                "0": "40.26093, 111.65990",
+                "1": "40.26006, 111.66164",
+                "2": "40.25093, 111.64749"
+            }
+        },
+        {
+            "route_id": "2",
+            "route_name": "Wymount Ryde Shuttle",
+            "route_coordinates": {
+                "0": "40.25854, 111.64164",
+                "1": "40.26014, 111.64304",
+                "2": "40.25093, 111.64749"
+            }
+
+        }
+    ],
+    "uta_routes": [
+
+    ]
+}

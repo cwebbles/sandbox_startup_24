@@ -1,5 +1,9 @@
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
+
+const db = require('./src/fake-db.js');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -10,6 +14,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Define a route to handle requests for the root URL
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/db', (req, res) => {
+  const results = db.getRouteData();
+  console.log(results)
+  res.send(results);
 });
 
 // Start the server
