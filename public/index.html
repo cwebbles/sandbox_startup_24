@@ -7,10 +7,31 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs9bfpAKuLclsBsZUIOGKdw8XJRWzaJgA&callback=initMap"></script>
     <link rel="stylesheet" href="style.css">
     <script src="directions.js"></script>
+    <script>
+        var directionsService,
+            directionsRenderer;
+            map
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: {lat: 41.8781, lng: -87.6298}, // Centered on Chicago
+                disableDefaultUI: true,
+            });
+
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+        }
+    </script>
 </head>
 <body>
     <h1>Our Parking Solution</h1>
+    
     <div id="map"></div>
     <div id="directionsPanel"></div>
+
+    <button id="test">Get Ryde</button>
+    <button id="test2">Get Bike</button>
 </body>
 </html>

@@ -16,12 +16,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/db', (req, res) => {
-  const results = db.getRouteData();
-  console.log(results)
-  res.send(results);
-});
-
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
