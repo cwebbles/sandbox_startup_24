@@ -27,6 +27,8 @@ h1 {
     color: #fff;
     padding: 10px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     border-top-left-radius: 20px;
     /* Adjust the radius as needed */
@@ -44,6 +46,10 @@ h1 {
     border-radius: 5px;
   }
 
+
+  .offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.0001); /* Adjust the alpha (fourth value) for opacity */
+  }
 
 .offcanvas.show {
     height: 456px;
