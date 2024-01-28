@@ -6,16 +6,8 @@ html {
     font-family: Arial, sans-serif;
 }
 
-h1 {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-}
-
 #map {
-    height: 90%;
+    height: 95%;
     width: 100%;
     border-radius: 5px;
 }
