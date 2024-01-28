@@ -11,7 +11,7 @@ const MOA = '40.25093, -111.64749';
 const BIKE_RACK = '40.25242, -111.65084';
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
         center: { lat: 41.8781, lng: -87.6298 },
         disableDefaultUI: true,
@@ -27,15 +27,57 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 function eventListeners() {
-    const testButton = document.getElementById('test');
-    testButton.addEventListener('click', () => {
-        routeToClosestByuStop();
-    });
-    const bikeButton = document.getElementById('test2');
-    bikeButton.addEventListener('click', () => {
-        routeToBikeRack();
-    });
+    const clickableDiv = document.getElementById('1');
+    clickableDiv.addEventListener('click', shiftModal);
     return;
+}
+
+function shiftModal() {
+    routeToClosestByuStop();
+
+    const parent = document.getElementById('offcanvasBottom');
+
+    const child = document.getElementById('child');
+    parent.removeChild(child);
+
+    parent.innerHTML = `
+    <button class="swipeBar" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div id="child">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title" id="offcanvasBottomLabel">Directions to Campus</h3>
+    </div>
+    <div class="offcanvas-body small" >
+        <!-- Rows -->
+        <div class="row mb-3" id="1">
+            <div class="col">
+                <div class="d-flex justify-content-between">
+                    <span>3 minute walk</span>
+                </div>
+                <div>
+                    Home -> 300 N 400 E
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <div class="d-flex justify-content-between">
+                    <span>6 minute shuttle ride</span>
+                    <span>Arrives at 9:44 am</span>
+                </div>
+                <div>
+                    300 N 400 E -> Campus
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blueDiv">
+        <button type="button" class="bluebutt">GO</button>
+    </div>
+</div>
+    `
+
+    const mapDiv = document.getElementById('map');
+    mapDiv.style.height = '70%';
 }
 
 async function routeToClosestByuStop() {

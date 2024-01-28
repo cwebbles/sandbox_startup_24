@@ -43,8 +43,39 @@ html {
     background-color: rgba(0, 0, 0, 0.0001); /* Adjust the alpha (fourth value) for opacity */
   }
 
+  .blueDiv {
+    display: flex;
+    justify-content: center;
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 0; /* Align to the bottom of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+    width: 329px; /* Width of the button */
+    margin-bottom: 20px; /* Space from the bottom edge */
+}
+
+.bluebutt {
+    border-radius: 20px;
+    border: 2px solid #2A5CC2;
+    background: #155EEF;
+    display: flex;
+    width: 100%; /* Use 100% of the container width */
+    padding: 13px 0px 14px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;}
+
 .offcanvas.show {
-    height: 456px;
+    height: 352px;
     border-radius: 24px;
 }
 
