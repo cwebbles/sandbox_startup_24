@@ -1,9 +1,11 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
 h1 {
     text-align: center;
     margin: 0;
@@ -13,13 +15,35 @@ h1 {
 }
 
 #map {
-    height: 100%;
+    height: 90%;
     width: 100%;
+    border-radius: 5px;
 }
 
-#directionsPanel {
+#bottomDiv {
+    height: auto;
+    width: auto;
+    background-color: #fff;
+    color: #fff;
     padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    /* Adjust the radius as needed */
+    border-top-right-radius: 20px;
+    /* Adjust the radius as needed */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
+
+.swipeBar {
+    height: 2px;
+    background-color: #6A6A6A;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+
 
 .offcanvas.show {
     height: 456px;
@@ -33,14 +57,17 @@ h1 {
 
 .offcanvas-body .row {
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc; /* Grey line */
-    padding-bottom: 10px; /* Spacing below each row */
-    
+    border-bottom: 1px solid #ccc;
+    /* Grey line */
+    padding-bottom: 10px;
+    /* Spacing below each row */
+
 }
 
 .offcanvas-body .row:last-child {
-    border-bottom: none; /* Remove the border from the last row */
-    
+    border-bottom: none;
+    /* Remove the border from the last row */
+
 }
 
 .offcanvas-body .row .col span:first-child {
