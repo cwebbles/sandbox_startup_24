@@ -30,6 +30,10 @@ html {
     border-bottom-right-radius: 0;
 }
 
+.offcanvas-header {
+    padding-bottom: 0 !important;
+}
+
 .swipeBar {
     height: 2px;
     background-color: #6A6A6A;
